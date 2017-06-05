@@ -1,0 +1,13 @@
+version: '2'
+services:
+  nginx:
+    build:
+       context: .
+    ports:
+    - "0.0.0.0:80:80"
+    links:
+    - redis.com
+  redis.com:
+    image: registry.wepiao.com/redis
+    volumes: 
+    - /data/nfs/ang_redis_data:/data
