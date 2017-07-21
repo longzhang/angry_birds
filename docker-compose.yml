@@ -8,6 +8,6 @@ services:
     links:
     - redis.com
   redis.com:
-    image: registry.wepiao.com/redis
+    image: redis
     volumes: 
     - /data/nfs/ang_redis_data:/data
